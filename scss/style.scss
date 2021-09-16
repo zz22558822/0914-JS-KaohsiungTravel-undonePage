@@ -1,0 +1,294 @@
+@import 'reset';
+@import './mixin/text-hidden';
+@import './mixin/RWD';
+
+
+$purple :#8A82CC;
+$orange :#FFA782;
+$yello : #F5D105;
+$blue : #559AC8;
+
+
+
+.wrap{
+    max-width: 1024px;
+    margin: 0 auto;
+    a{
+        text-decoration: none;
+    }
+}
+
+.banner{
+    height: 380px;
+    background: url(../images/Hero.png);
+    position: relative;
+
+    h1{
+        width: 100%;
+        position: absolute;
+        top: 25%;
+        text-align: center;
+        a{
+            font-size: 40px;
+            color: #FFF;
+            letter-spacing: 3.89px;
+        }
+    }
+    select{
+        position: absolute;
+        top: 60%;
+        right: 28%;
+        left: 28%;
+
+        width: 42%;
+        background: rgba(255,255,255,0.70);
+        border: 3px solid #FFFFFF;
+        border-radius: 3px;
+        font-size: 18px;
+        color: #000000;
+        line-height: 21px;
+        padding: 10px;
+        @include mobile-767{
+            width: 80%;
+            right: 10%;
+            left: 10%;
+        }
+    }
+}
+
+.popular-frame{
+    display: flex;
+    justify-content: center;
+    .popular{
+        width: 78%;
+        transform: translateY(-25px);
+        background: #FFFFFF;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+        border-radius: 5px;
+        @include mobile-767{
+            width: 95%;
+        }
+        h2{
+            font-size: 18px;
+            color: #000000;
+            padding-top: 15px;
+            padding-left: 20px;
+            @include mobile-767{
+                text-align: center;
+                padding-left: 0;
+                font-size: 22px;
+            }
+        }
+        .popular-btns{
+            display: flex;
+            padding: 20px 50px;
+            @include mobile-767{
+                padding: 20px 8px;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+            .popular-btn{
+                border-radius: 5px;
+                font-size: 20px;
+                color: #FFFFFF;
+                width: 130px;
+                height: 42px;
+                text-align: center;
+                line-height: 2em;
+                margin-right: 20px;
+                @include mobile-767{
+                    width: 47%;
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+            }
+            .popular-btn-1{
+                background: $purple;
+            }
+            .popular-btn-2{
+                background: $orange;
+            }
+            .popular-btn-3{
+                background: $yello;
+            }
+            .popular-btn-4{
+                background: $blue;
+            }
+            a:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+
+
+
+.border{
+    border-top: 1px dashed #559AC8;
+    position: relative;
+    .fa-sort-down{
+        position: absolute;
+        top: -15px;
+        left: 48.5%;
+        border-radius: 50%;
+        border: 2px solid #559AC8;
+        background-color: #fff;
+        color: $blue;
+        padding: 2px 8px 10px 8px;
+    }
+}
+
+
+
+
+
+
+
+
+.container{
+    margin-top: 60px;
+    margin-bottom: 40px;
+
+    .list-title{
+        text-align: center;
+        font-size: 36px;
+        color: $purple;
+        font-weight: bold;
+    }
+
+    .list{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        li{
+            width: 45%;
+            margin-top: 25px;
+            box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20);
+            @include mobile-767{
+                width: 85%;
+            }
+            .card-img{
+                width: 100%;
+                height: 155px;
+                background: url(https://khh.travel/image/1654/640x480);
+                background-size: cover;
+                background-position-y: center;
+                position: relative;
+                .card-title{
+                    width: 100%;
+                    padding: 10px 20px;
+                    position: absolute;
+                    bottom: 0;
+                    font-size: 24px;
+                    color: #FFF;
+                    background-image: linear-gradient(-180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.54) 50%);
+                    span{
+                        font-size: 16px;
+                        position: absolute;
+                        bottom: 0;
+                        right: 5%;
+                        padding: 10px 0;
+                    }
+                }
+            }
+
+            .info{
+                padding: 15px 25px;
+                position: relative;
+                @include mobile-767{
+                    padding: 15px 10px;
+                }
+                p{
+                    padding-top: 8px;
+                    line-height: 1.5em;
+                    img{
+                        margin-right: 8px;
+                    }
+                }
+                .card-tag{
+                    position: absolute;
+                    right: 3%;
+                    bottom: 15%;
+                    @include mobile-767{
+                        bottom: 5%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+.pagination{
+    text-align: center;
+    margin: 40px auto 0;
+    li{
+        display: inline-block;
+        a{
+            font-size: 14px;
+            color: #4A4A4A;
+            padding: 10px;
+            @include mobile-767{
+                font-size: 20px;
+                padding: 11px 17px;
+                font-weight: bold;
+                margin: 0 10px;
+            }
+        }
+        .now{
+            color: $blue;
+        }
+        .no{
+            color: rgba(74,74,74,0.50);
+            pointer-events: none;
+        }
+    }
+}
+
+
+
+
+
+
+
+.footer{
+    text-align: center;
+    background: $blue;
+    padding: 16px 0;
+    p{
+        font-size: 14px;
+        color: #FFFFFF;
+        padding: 10px;
+    }
+    span{
+        display: block;
+        font-size: 14px;
+        color: #FFD366;
+        padding-bottom: 10px;
+    }
+}
+
+.top-btn{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    .fa-angle-double-up{
+        color: white;
+        background-color: $blue;
+        padding: 10px;
+        opacity: 0.6;
+        &:hover{
+            opacity: 0.9;
+        }
+    }
+}
+.btn-none{
+    display: flex;
+}
